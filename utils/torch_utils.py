@@ -380,7 +380,7 @@ def smart_optimizer(model, name="Adam", lr=0.001, momentum=0.9, decay=1e-5):
     optimizer.add_param_group({"params": g[1], "weight_decay": 0.0})  # add g1 (BatchNorm2d weights)
     LOGGER.info(
         f"{colorstr('optimizer:')} {type(optimizer).__name__}(lr={lr}) with parameter groups "
-        f'{len(g[1])} weight(decay=0.0), {len(g[0])} weight(decay={decay}), {len(g[2])} bias'
+        f"{len(g[1])} weight(decay=0.0), {len(g[0])} weight(decay={decay}), {len(g[2])} bias"
     )
     return optimizer
 
